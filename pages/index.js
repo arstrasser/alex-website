@@ -1,30 +1,23 @@
 import Link from 'next/link';
 import Layout from '../components/layout';
-
-const Page = (props) => (
-  <div className="Page">
-    <div>
-      {props.children}
-    </div>
-    <style jsx>{`
-      .Header {
-        display: flex;
-        flex-direction: row;
-        height: 60px;
-        width: 100%;
-        background-color:rgba(0,0,0,0.7);
-        padding:5px;
-        top:0;
-        position:fixed;
-      }
-    `}</style>
-  </div>
-);
+import Slide from '../components/slide';
+import MainSlide from '../components/main-slide';
 
 const Index = () => (
   <Layout title="Alex Strasser">
     <div>
-      <Page></Page>
+      <MainSlide>
+
+      </MainSlide>
+      <Slide>
+
+      </Slide>
+      <Slide>
+
+      </Slide>
+      <Slide>
+
+      </Slide>
     </div>
   </Layout>
 );

@@ -18,7 +18,7 @@ const Header = () => (
         flex-direction: row;
         height: 60px;
         width: 100%;
-        background-color:rgba(0,0,0,0.7);
+        background-color:#242038;
         padding:5px;
         top:0;
         position:fixed;
@@ -41,6 +41,11 @@ const Header = () => (
         color:white;
         text-decoration: none;
         font: bold 20px helvetica;
+        border-radius: 3px;
+      }
+
+      .header-links a:hover {
+        background:rgba(255,255,255,0.5)
       }
     `}</style>
   </div>
