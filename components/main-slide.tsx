@@ -1,10 +1,13 @@
 import Slide from './slide';
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-scroll';
 
-import { options, imagePrefix } from '../data/home.js';
+import { options, imagePrefix } from '../data/home';
 
 class MainSlide extends React.Component {
+  state:{current:number, header:string, blink:boolean};
+  blinkTimer:number = null;
+  timer:number = null;
 
   constructor(){
     super();
@@ -45,7 +48,7 @@ class MainSlide extends React.Component {
       this.blink();
       //If we have reached the last one
       if(this.state.current+1 === options.length){
-        setTimeout(()=> {
+        this.timer = setTimeout(()=> {
           this.noblink();
           this.setState({blink:false});
         }, 1700);
@@ -61,7 +64,7 @@ class MainSlide extends React.Component {
       this.setState({
         header: this.state.header + options[this.state.current].header[this.state.header.length]
       });
-      setTimeout(() => this.addToHeader(), 100+Math.random()*50);
+      this.timer = setTimeout(() => this.addToHeader(), 100+Math.random()*50);
     }
   }
 
@@ -69,12 +72,12 @@ class MainSlide extends React.Component {
     this.noblink();
     //If we have removed enough characters, start adding characters again.
     if(options[this.state.current].header.startsWith(this.state.header)){
-      setTimeout(() => this.addToHeader(), 100+Math.random()*50);
+      this.timer = setTimeout(() => this.addToHeader(), 100+Math.random()*50);
     }
     //Else, we need to remove another characer
     else {
       this.setState({header:this.state.header.substring(0,this.state.header.length-1)});
-      setTimeout(() => this.remFromHeader(), 50+Math.random()*20);
+      this.timer = setTimeout(() => this.remFromHeader(), 50+Math.random()*20);
     }
   }
 
