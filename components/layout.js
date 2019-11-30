@@ -12,7 +12,7 @@ const Layout = (props) => (
       <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico" />
     </Head>
     <Header />
-    <div className="content">
+    <div className="content" id="scroll-container">
       {props.children}
       <Footer />
     </div>
@@ -29,7 +29,7 @@ const Layout = (props) => (
         }
         .content {
           width:100%;
-          height:100%;
+          height:calc(100% - 70px);
           overflow-y: auto;
           overflow-x: hidden;
           background:black;

@@ -1,8 +1,8 @@
+import { Element } from 'react-scroll';
+
 const Slide = (props) => (
-  <div className="Slide">
-    <div>
-      {props.children}
-    </div>
+  <div id={"anchor-"+props.anchor} className="element Slide">
+    {props.children}
     <style jsx>{`
       .Slide {
         height: calc(100vh - 70px);

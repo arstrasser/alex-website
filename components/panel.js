@@ -1,11 +1,12 @@
 const Panel = (props) => (
     <div className="Panel">
-      <div className="flip-display">{props.text}</div>
+      {props.children}
       <style jsx>{`
         .Panel {
           display:inline-block;
-          width: 50vw;
-          height:100%;
+          width: 50%;
+          height:calc(100vh - 70px);
+          vertical-align:top;
         }
       `}</style>
     </div>

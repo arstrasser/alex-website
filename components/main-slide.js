@@ -1,5 +1,6 @@
 import Slide from '../components/slide';
 import React from 'react'
+import { Link } from 'react-scroll';
 
 const options = [
   {
@@ -13,8 +14,8 @@ const options = [
     "images":["Maker.jpg", "Maker2.jpg"]
   },
   {
-    "name":"Programmer",
-    "header":"I am a Programmer",
+    "name":"Coder",
+    "header":"I am a Coder",
     "images":["Team.jpg"]
   },
   {
@@ -26,6 +27,11 @@ const options = [
     "name":"Techie",
     "header":"I am a Techie",
     "images":["Tech.jpg", "Tech2.jpg"]
+  },
+  {
+    "name":"Me",
+    "header":"I am Alex Strasser.",
+    "images":["Robotics2.jpg"]
   }
 ]
 
@@ -34,12 +40,12 @@ class MainSlide extends React.Component {
   constructor(){
     super();
     this.state = {current: 0, header: "I am a", blink:true};
-    this.blink();
     this.blinkTimer = null;
   }
 
   componentDidMount(){
-    this.timer = setTimeout(()=>this.addToHeader(), 1600);
+    this.blink();
+    this.timer = setTimeout(()=>this.addToHeader(), 900);
   }
 
   componentWillUnmount(){
@@ -68,17 +74,25 @@ class MainSlide extends React.Component {
     //If we already have the whole header typed out
     if(this.state.header == options[this.state.current].header){
       this.blink();
-      this.timer = setTimeout(()=>{
-        this.setState({current: (this.state.current+1)%options.length});
-        this.remFromHeader();
-      }, 3400);
+      //If we have reached the last one
+      if(this.state.current+1 === options.length){
+        setTimeout(()=> {
+          this.noblink();
+          this.setState({blink:false});
+        }, 1700);
+      }else{
+        this.timer = setTimeout(()=>{
+          this.setState({current: (this.state.current+1)%options.length});
+          this.remFromHeader();
+        }, 1800);
+      }
     }
     //We still need to add more characters
     else{
       this.setState({
         header: this.state.header + options[this.state.current].header[this.state.header.length]
       });
-      setTimeout(() => this.addToHeader(), 200+Math.random()*100);
+      setTimeout(() => this.addToHeader(), 100+Math.random()*50);
     }
   }
 
@@ -86,7 +100,7 @@ class MainSlide extends React.Component {
     this.noblink();
     //If we have removed enough characters, start adding characters again.
     if(options[this.state.current].header.startsWith(this.state.header)){
-      setTimeout(() => this.addToHeader(), 100+Math.random()*100);
+      setTimeout(() => this.addToHeader(), 100+Math.random()*50);
     }
     //Else, we need to remove another characer
     else {
@@ -99,14 +113,19 @@ class MainSlide extends React.Component {
 
     return (
       <Slide background="rgba(0,0,0,1)">
-        <div className="bg">
-          {options.map((value, index) => {
-            return <img key={index} src={"/static/images/home/"+value.images[0]} style={{opacity:this.state.current == index?1:0}} />
-          })}
-        </div>
-        <div className="gradient">
-          <div className="page-header">
-            {this.state.header}<div className={"cursor "+(this.state.blink?"blink":"blink-off")}></div>
+        <div>
+          <div className="bg">
+            {options.map((value, index) => {
+              return <img key={index} src={"/static/images/home/"+value.images[0]} style={{opacity:this.state.current == index?1:0}} />
+            })}
+          </div>
+          <div className="gradient">
+
+            <div className="page-header">
+              <Link activeClass="active" to={"anchor-"+this.state.current} spy={true} smooth={true} containerId="scroll-container" duration={1000}>
+                <a>{this.state.header}<div className={"cursor "+(this.state.blink?"blink":"blink-off")}></div></a>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -159,6 +178,13 @@ class MainSlide extends React.Component {
             text-align:center;
           }
 
+          a {
+            text-decoration: underline;
+          }
+
+          a:hover {
+            cursor:pointer;
+          }
 
         `}</style>
       </Slide>
