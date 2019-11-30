@@ -1,39 +1,8 @@
-import Slide from '../components/slide';
+import Slide from './slide';
 import React from 'react'
 import { Link } from 'react-scroll';
 
-const options = [
-  {
-    "name":"Student",
-    "header":"I am a Student",
-    "images":["Robotics.JPG"]
-  },
-  {
-    "name":"Maker",
-    "header":"I am a Maker",
-    "images":["Maker.jpg", "Maker2.jpg"]
-  },
-  {
-    "name":"Coder",
-    "header":"I am a Coder",
-    "images":["Team.jpg"]
-  },
-  {
-    "name":"Engineer",
-    "header":"I am an Engineer",
-    "images":["Engineer2.jpg", "Engineer.jpg"]
-  },
-  {
-    "name":"Techie",
-    "header":"I am a Techie",
-    "images":["Tech.jpg", "Tech2.jpg"]
-  },
-  {
-    "name":"Me",
-    "header":"I am Alex Strasser.",
-    "images":["Robotics2.jpg"]
-  }
-]
+import { options, imagePrefix } from '../data/home.js';
 
 class MainSlide extends React.Component {
 
@@ -116,7 +85,7 @@ class MainSlide extends React.Component {
         <div>
           <div className="bg">
             {options.map((value, index) => {
-              return <img key={index} src={"/static/images/home/"+value.images[0]} style={{opacity:this.state.current == index?1:0}} />
+              return <img key={index} src={imagePrefix+value.mainImage} style={{opacity:this.state.current == index?1:0}} />
             })}
           </div>
           <div className="gradient">
