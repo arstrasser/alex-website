@@ -10,9 +10,9 @@ Project Format
   }
 */
 
-module.exports.tags = ["CS", "Maker", "Volunteer", "Work"];
+const tags = ["CS", "Maker", "Volunteer", "Work"];
 
-module.exports.projects = [
+const projects = [
   {
     name:"Pingry App",
     short: "",
@@ -98,4 +98,6 @@ module.exports.projects = [
     pictures: [],
     tags:[]
   },
-]
+];
+
+export { projects, tags };

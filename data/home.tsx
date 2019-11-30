@@ -1,4 +1,4 @@
-module.exports.options = [
+const options = [
   {
     name:"Student",
     header:"I am a Student",
@@ -33,4 +33,6 @@ module.exports.options = [
   }
 ];
 
-module.exports.imagePrefix = "/static/images/home/";
+const imagePrefix = "/static/images/home/"
+
+export { options, imagePrefix};

@@ -1,5 +1,3 @@
-import { Element } from 'react-scroll';
-
 const Slide = (props) => (
   <div id={"anchor-"+props.anchor} className="element Slide">
     {props.children}

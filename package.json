@@ -15,5 +15,12 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scroll": "^1.7.14"
+  },
+  "repository": "https://github.com/arstrasser/alex-website.git",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.13",
+    "typescript": "^3.7.2"
   }
 }

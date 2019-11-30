@@ -6,11 +6,11 @@ import { options, imagePrefix } from '../data/home';
 
 class MainSlide extends React.Component {
   state:{current:number, header:string, blink:boolean};
-  blinkTimer:number = null;
-  timer:number = null;
+  blinkTimer:NodeJS.Timeout = null;
+  timer:NodeJS.Timeout = null;
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {current: 0, header: "I am a", blink:true};
     this.blinkTimer = null;
   }
