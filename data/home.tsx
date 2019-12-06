@@ -35,4 +35,4 @@ const options = [
 
 const imagePrefix = "/static/images/home/"
 
-export { options, imagePrefix};
+export { options, imagePrefix };

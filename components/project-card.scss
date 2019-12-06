@@ -1,0 +1,60 @@
+.ProjectCard {
+  width:100%;
+  display:block;
+  flex: 1 1 300px;
+  margin:10px;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #FF7F50;
+  position:relative;
+}
+
+.card-image {
+  width:100%;
+  background-size: cover;
+  overflow:hidden;
+}
+
+.card-image > div {
+  padding-top: 100%;
+}
+
+.card-content {
+  padding:10px;
+  font-size: 1em;
+}
+
+.card-title {
+  font-weight:bold;
+  font-size: 1.5em;
+  margin-top: 5px;
+  margin-bottom:3px;
+}
+
+.card-subtitle {
+  font-size: 1em;
+}
+
+.card-link {
+  display: block;
+}
+
+.card-links {
+  margin-bottom: calc(1em + 25px);
+}
+
+.card-tags {
+  position:absolute;
+  bottom:10px;
+  margin-top: 5px;
+  font-size: 0.75em;
+}
+
+.tag {
+  display:inline-block;
+  margin: 0 10px;
+  padding:8px;
+  border-radius:5px;
+  color:white;
+  background: #3C1518;
+}

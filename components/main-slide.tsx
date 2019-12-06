@@ -1,6 +1,7 @@
 import Slide from './slide';
 import React from 'react';
 import { Link } from 'react-scroll';
+import "./main-slide.scss";
 
 import { options, imagePrefix } from '../data/home';
 
@@ -9,7 +10,7 @@ class MainSlide extends React.Component {
   blinkTimer:NodeJS.Timeout = null;
   timer:NodeJS.Timeout = null;
 
-  constructor(props){
+  constructor(props:any){
     super(props);
     this.state = {current: 0, header: "I am a", blink:true};
     this.blinkTimer = null;
@@ -100,65 +101,6 @@ class MainSlide extends React.Component {
             </div>
           </div>
         </div>
-
-        <style jsx>{`
-          .bg {
-            position: relative;
-            width:100%;
-            height:100%;
-          }
-          .bg > img {
-            display: block;
-            position:absolute;
-            height: calc(100vh - 70px);
-            transition: 2s;
-            margin-left: -20%;
-          }
-
-          .gradient {
-            width:100%;
-            height: calc(100vh - 70px);
-            background: rgb(255,255,255);
-            background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,1) 50%);
-            position:relative;
-          }
-
-          .blink {
-            transition: 0s;
-            opacity: 1;
-          }
-
-          .blink-off {
-            transition: 0.3s;
-            opacity: 0;
-          }
-
-          .cursor {
-            display:inline-block;
-            width:10px;
-            height: 110px;
-            margin-left:10px;
-            margin-bottom:-20px;
-            background:white;
-          }
-
-          .page-header {
-            font-size: 100px;
-            font-weight: bold;
-            display:block;
-            padding-top: calc(50vh - 70px - 50px);
-            text-align:center;
-          }
-
-          a {
-            text-decoration: underline;
-          }
-
-          a:hover {
-            cursor:pointer;
-          }
-
-        `}</style>
       </Slide>
     );
   }

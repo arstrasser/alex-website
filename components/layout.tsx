@@ -1,9 +1,10 @@
 import Head from 'next/head';
-
 import Header from './header';
 import Footer from './footer';
 
-const Layout = (props) => (
+import './main.scss';
+
+const Layout = (props:{title:string, children:any}) => (
   <div className="main-container">
     <Head>
       <title>{props.title}</title>
@@ -13,28 +14,7 @@ const Layout = (props) => (
     <Header />
     <div className="content" id="scroll-container">
       {props.children}
-      <Footer />
     </div>
-    <style jsx global>{`
-        html, body {
-          margin:0;
-          padding:0;
-          font-family: helvetica
-        }
-        .main-container {
-          width:100vw;
-          height:100vh;
-          overflow:hidden;
-        }
-        .content {
-          width:100%;
-          height:calc(100% - 70px);
-          overflow-y: auto;
-          overflow-x: hidden;
-          background:black;
-        }
-
-      `}</style>
   </div>
 );
 

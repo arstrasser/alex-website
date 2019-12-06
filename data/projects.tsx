@@ -9,95 +9,118 @@ Project Format
     tags:<Array of tags for the project>
   }
 */
+const imagePrefix = "/static/images/projects/";
 
-const tags = ["CS", "Maker", "Volunteer", "Work"];
+const tags:string[] = ["CS", "Maker", "Volunteer", "Work"];
 
-const projects = [
+const projects:Array<{
+    name:string,
+    short:string,
+    description:string,
+    pictures:string[],
+    tags:string[],
+    links?:{text:string, url:string}[]
+  }> =
+[
   {
     name:"Pingry App",
-    short: "",
+    short: "App to organize classes and school information for my high school.",
     description: "",
-    pictures: [],
+    links: [],
+    pictures: ["PingryTodayApp.png"],
     tags:["Volunteer", "CS"]
   },
   {
     name:"Pingry API",
-    short: "",
+    short: "API that provides a central location for processing of data feeds and data management for Pingry App. Additionally provides these functions for other CS projects at Pingry.",
     description: "",
-    pictures: [],
+    links: [{text:"View code on Github", url:"https://github.com/arstrasser/pingry-api"}],
+    pictures: ["PingryAPI.png"],
     tags:["Volunteer", "CS"]
   },
   {
     name:"Puzzle Box Dice",
-    short: "",
+    short: "3D printed puzzle with electronic locks driven by Arduino that only opens when solved.",
     description: "",
-    pictures: [],
+    links: [],
+    pictures: ["DicePuzzle.jpg"],
     tags:["Volunteer", "CS"]
   },
   {
     name:"2048 Solver",
-    short: "",
-    description: "",
-    pictures: [],
+    short: "Machine learning approach to solve 2048",
+    description: "2048 was a popular mobile game in 2014",
+    pictures: ["2048.png"],
+    links:[
+      {text:"View it live", url:"https://arstrasser.github.io/2048-solver/UI/"},
+      {text:"View code on Github", url:"https://arstrasser.github.io/2048-solver/UI/"}
+    ],
     tags:["Volunteer", "CS"]
   },
   {
     name:"Robotics",
-    short: "",
+    short: "Captain of high school robotics for 2 years: FRC team 2577 and FTC 6069",
     description: "",
-    pictures: [],
-    tags:["Volunteer", "CS"]
+    links: [],
+    pictures: ["Robotics.jpg"],
+    tags:[]
   },
   {
     name:"Somerset County 4-H Fair App",
-    short: "",
+    short: "Mobile app for the Somerset County 4-H Fair",
     description: "",
-    pictures: [],
+    links: [],
+    pictures: ["FairApp.jpg"],
     tags:["Volunteer", "CS"]
   },
   {
     name:"4-H Robotics Scoring System",
-    short: "",
+    short: "Scoring system with webcam and interface for scoring the 4-H fair robotics challenge",
     description: "",
-    pictures: [],
-    tags:[]
+    links: [{text:"View code on Github", url:"https://github.com/arstrasser/4hRobotics2019"}],
+    pictures: ["ScoringSystem.jpg"],
+    tags:["Volunteer", "CS"]
   },
   {
     name:"Puzzle Box Zero",
-    short: "",
+    short: "My first puzzle box outfitted with servos and Arduino",
     description: "",
-    pictures: [],
-    tags:[]
+    links: [],
+    pictures: ["PuzzleBox0-3.jpg"],
+    tags:["Maker"]
   },
   {
     name:"3D Renderer",
     short: "A simple ray tracer in Processing3",
     description: "",
-    pictures: [],
-    tags:[]
+    links: [{text:"View code on Github", url:"https://github.com/arstrasser/ray-tracer"}],
+    pictures: ["RayTracer.png"],
+    tags:["CS"]
   },
   {
     name:"Custom Chocolates",
     short: "3D printed flexible chocolate molds",
     description: "",
-    pictures: [],
-    tags:[]
+    links: [],
+    pictures: ["Chocolate.jpg"],
+    tags:["Maker"]
   },
   {
     name:"Home Automation",
-    short: "Making my dorm room automated",
+    short: "Making my dorm room run on its own!",
     description: "",
-    pictures: [],
-    tags:[]
+    links: [],
+    pictures: ["LightSwitch.jpg"],
+    tags:["Maker"]
   },
   {
     name:"Personal Website",
     short: "The website you're looking at now!",
     description: "This website was built on react.",
-    link: {text:"View the code on Github", url:""},
-    pictures: [],
-    tags:[]
+    links: [{text:"View the code on Github", url:""}],
+    pictures: ["AS.png"],
+    tags:["CS"]
   },
 ];
 
-export { projects, tags };
+export { projects, tags, imagePrefix };
