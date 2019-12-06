@@ -4,7 +4,7 @@
   "description": "Personal website for Alex Strasser",
   "main": "index.js",
   "scripts": {
-    "dev": "node --max_old_space_size=1024 node_modules/next/dist/bin/next",
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },

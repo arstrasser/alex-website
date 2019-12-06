@@ -117,7 +117,7 @@ const projects:Array<{
     name:"Personal Website",
     short: "The website you're looking at now!",
     description: "This website was built on react.",
-    links: [{text:"View the code on Github", url:""}],
+    links: [{text:"View the code on Github", url:"https://github.com/arstrasser/alex-website"}],
     pictures: ["AS.png"],
     tags:["CS"]
   },
