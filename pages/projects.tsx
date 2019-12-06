@@ -2,9 +2,11 @@ import Layout from '../components/layout';
 import { projects, tags, imagePrefix } from '../data/projects';
 import ProjectCard from '../components/project-card';
 
+import '../components/projects-page.scss';
+
 const Projects = () => (
   <Layout title="Alex Strasser">
-    <div style={{display:"flex", flexWrap:"wrap", justifyContent:"center", padding:'10px', background:'white'}}>
+    <div className="project-container">
       {projects.map((value, index) => {
         return (
           <ProjectCard

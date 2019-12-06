@@ -34,3 +34,9 @@ a {
 .header-links a:hover {
   background:rgba(255,255,255,0.5)
 }
+
+@media screen and (max-width: 600px) {
+  .header-links {
+    display:none
+  }
+}
