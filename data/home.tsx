@@ -2,24 +2,22 @@ const options = [
   {
     name:"Student",
     header:"I am a Student",
-    mainImage:"Robotics.JPG"
+    mainImage:"student1.jpg"
   },
   {
     name:"Maker",
     header:"I am a Maker",
-    mainImage:"Maker.jpg",
+    mainImage:"maker.jpg",
   },
   {
     name:"Coder",
     header:"I am a Coder",
-    mainImage:"Team.jpg",
-    "images":["Team.jpg"]
+    mainImage:"team.jpg"
   },
   {
     name:"Engineer",
     header:"I am an Engineer",
-    mainImage:"Engineer2.jpg",
-    "images":["Engineer2.jpg", "Engineer.jpg"]
+    mainImage:"Engineer2.jpg"
   },
   {
     name:"Techie",
@@ -29,7 +27,7 @@ const options = [
   {
     name:"Me",
     header:"I am Alex Strasser.",
-    mainImage:"Robotics2.jpg"
+    mainImage:"robotics2.jpg"
   }
 ];
 

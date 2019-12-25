@@ -11,7 +11,7 @@ Project Format
 */
 const imagePrefix = "/static/images/projects/";
 
-const tags:string[] = ["CS", "Maker", "Volunteer", "Work"];
+const tags:string[] = ["CS", "Maker", "Volunteer", "Work", "Robotics"];
 
 const projects:Array<{
     name:string,
@@ -26,7 +26,10 @@ const projects:Array<{
     name:"Pingry App",
     short: "App to organize classes and school information for my high school.",
     description: "",
-    links: [],
+    links: [
+      {text:"View it on the App Store", url:"https://apps.apple.com/us/app/pingry-today/id1206043892"},
+      {text:"View it on Google Play", url:"https://play.google.com/store/apps/details?id=org.pingry.pingryappandroid"}
+    ],
     pictures: ["PingryTodayApp.png"],
     tags:["Volunteer", "CS"]
   },
@@ -58,12 +61,12 @@ const projects:Array<{
     tags:["Volunteer", "CS"]
   },
   {
-    name:"Robotics",
+    name:"Pingry Robotics",
     short: "Captain of high school robotics for 2 years: FRC team 2577 and FTC 6069",
     description: "",
     links: [],
     pictures: ["Robotics.jpg"],
-    tags:[]
+    tags:["Robotics"]
   },
   {
     name:"Somerset County 4-H Fair App",
@@ -121,6 +124,14 @@ const projects:Array<{
     pictures: ["AS.png"],
     tags:["CS"]
   },
+  {
+    name:"Lego Robotics",
+    short: "4-H Lego Robot building for 9 years",
+    description: "",
+    links: [],
+    pictures: ["LegoRobot.jpg"],
+    tags:["Robotics"]
+  }
 ];
 
 export { projects, tags, imagePrefix };
