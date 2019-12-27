@@ -13,7 +13,14 @@ const TitlePanel = (props) => (
         font-weight: bold;
         display:block;
         line-height: calc(100vh - 70px);
+        white-space: nowrap;
         text-align:center;
+      }
+
+      @media (orientation: portrait) {
+        .panel-title {
+          line-height: calc(50vh - 35px);
+        }
       }
     `}</style>
   </Panel>

@@ -1,0 +1,17 @@
+
+.Panel {
+  display:inline-block;
+  height:100%;
+  vertical-align:top;
+  flex: 1 1 50vw;
+  padding:5px;
+}
+
+@media (orientation: portrait) {
+  .Panel {
+    flex-basis: 100%;
+    display:block;
+    height:auto;
+    vertical-align:top;
+  }
+}

@@ -8,14 +8,14 @@
   position:absolute;
   height: calc(100vh - 70px);
   transition: 2s;
-  margin-left: -20%;
+  transform: translateX(-20%);
 }
 
 .gradient {
   width:100%;
   height: calc(100vh - 70px);
   background: rgb(255,255,255);
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,1) 50%);
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 20%, black 40%);
   position:relative;
 }
 
@@ -52,4 +52,24 @@ a {
 
 a:hover {
   cursor:pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .page-header {
+    font-size: 70px;
+    padding-top: calc(50vh - 70px - 35px);
+  }
+
+  .cursor {
+    width:8px;
+    height:80px;
+  }
+
+  .bg > img {
+    transform: translateX(-40%);
+  }
+
+  .gradient {
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 30%, black 70%);
+  }
 }

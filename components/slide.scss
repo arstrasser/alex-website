@@ -1,0 +1,15 @@
+
+.Slide {
+  display:flex;
+  min-height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
+  width: 100%;
+  color:white;
+}
+
+@media (orientation: portrait) {
+  .Slide {
+    height: auto;
+    flex-direction:column !important;
+  }
+}

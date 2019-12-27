@@ -17,8 +17,12 @@ class MainSlide extends React.Component {
   }
 
   componentDidMount(){
-    this.blink();
-    this.timer = setTimeout(()=>this.addToHeader(), 900);
+    if(window.innerWidth > 550){
+      this.blink();
+      this.timer = setTimeout(()=>this.addToHeader(), 900);
+    }else{
+      this.setState({current:options.length - 1, header:"Alex Strasser", blink:false});
+    }
   }
 
   componentWillUnmount(){
@@ -85,7 +89,7 @@ class MainSlide extends React.Component {
   render(){
 
     return (
-      <Slide background="rgba(0,0,0,1)">
+      <Slide background="rgba(0,0,0,1)" display="block">
         <div>
           <div className="bg">
             {options.map((value, index) => {
@@ -93,10 +97,9 @@ class MainSlide extends React.Component {
             })}
           </div>
           <div className="gradient">
-
             <div className="page-header">
-              <Link activeClass="active" to={"anchor-"+this.state.current} spy={true} smooth={true} containerId="scroll-container" duration={1000}>
-                <a>{this.state.header}<div className={"cursor "+(this.state.blink?"blink":"blink-off")}></div></a>
+              <Link activeClass="active" to={"anchor-"+this.state.current} smooth={true} containerId="scroll-container" duration={1000}>
+                <span>{this.state.header}<div className={"cursor "+(this.state.blink?"blink":"blink-off")}></div></span>
               </Link>
             </div>
           </div>

@@ -12,7 +12,7 @@ const options = [
   {
     name:"Coder",
     header:"I am a Coder",
-    mainImage:"team.jpg"
+    mainImage:"coding.jpg"
   },
   {
     name:"Engineer",
