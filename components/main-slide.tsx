@@ -52,7 +52,7 @@ class MainSlide extends React.Component {
     if(this.state.header == options[this.state.current].header){
       this.blink();
       //If we have reached the last one
-      if(this.state.current+1 === options.length){
+      if(false){//if(this.state.current+1 === options.length){
         this.timer = setTimeout(()=> {
           this.noblink();
           this.setState({blink:false});
@@ -90,15 +90,10 @@ class MainSlide extends React.Component {
 
     return (
       <Slide background="rgba(0,0,0,1)" display="block">
-        <div>
-          <div className="bg">
-            {options.map((value, index) => {
-              return <img key={index} src={imagePrefix+value.mainImage} style={{opacity:this.state.current == index?1:0}} />
-            })}
-          </div>
+        <div className="bg" style={{backgroundImage:"url("+imagePrefix+"robotics2.jpg)"}}>
           <div className="gradient">
             <div className="page-header">
-              <Link activeClass="active" to={"anchor-"+this.state.current} smooth={true} containerId="scroll-container" duration={1000}>
+              <Link activeClass="active" to={"anchor-"+this.state.current} smooth={true} containerId="scroll-container" duration={1000} offset={-70}>
                 <span>{this.state.header}<div className={"cursor "+(this.state.blink?"blink":"blink-off")}></div></span>
               </Link>
             </div>

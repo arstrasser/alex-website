@@ -1,27 +1,13 @@
 import Panel from '../components/panel';
+import './list-panel.scss';
 
-const ListPanel = (props) => (
+const ListPanel = (props:{children:any}) => (
   <Panel>
     <div className="panel-list-container">
       <ul className="panel-list">
         {props.children}
       </ul>
     </div>
-    <style jsx>{`
-      .panel-list-container {
-        display:table;
-        height:100%;
-      }
-
-      .panel-list {
-        display:table-cell;
-        vertical-align:middle;
-        color:white;
-        font-size: 1.5em;
-        font-weight: bold;
-        line-height: 1.5em;
-      }
-    `}</style>
   </Panel>
 );
 

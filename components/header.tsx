@@ -4,7 +4,7 @@ import "./header.scss";
 const Header = () => (
   <div>
     <div className="Header">
-      <Link href="/"><a><img className="header-logo" src="static/images/AS.png" /></a></Link>
+      <Link href="/"><a className="header-logo"><img src="static/images/AS.png" /></a></Link>
       <div className="header-small-links small-only">
         <img src="/static/images/menu.png" />
         <div className="header-links">

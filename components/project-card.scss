@@ -3,7 +3,7 @@
   display:block;
   flex: 0 0 300px;
   margin:10px;
-  border-radius: 2px;
+  border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background: #FF7F50;
   position:relative;
@@ -13,6 +13,7 @@
   width:100%;
   background-size: cover;
   overflow:hidden;
+  border-radius: 3px 3px 0 0;
 }
 
 .card-image > div {

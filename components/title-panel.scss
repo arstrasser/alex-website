@@ -1,0 +1,22 @@
+.panel-title {
+  color:white;
+  font-size: 5em;
+  font-weight: bold;
+  display:block;
+  line-height: calc(100vh - 70px);
+  white-space: nowrap;
+  text-align:center;
+  height:100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 50%, black 100%);
+}
+
+.slide-reverse .panel-title {
+  background: linear-gradient(270deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 50%,black 100%)
+}
+
+@media (orientation: portrait) {
+  .panel-title {
+    line-height: calc(50vh - 35px);
+    background: linear-gradient(0deg,black 0%,rgba(0,0,0,0.2) 50%,black 100%) !important;
+  }
+}

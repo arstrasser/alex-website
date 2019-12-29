@@ -2,6 +2,8 @@
 
 This website was coded in React using next.js
 
+View live at [alex.strasserver.com](https://alex.strasserver.com)
+
 To run the webserver for development:
   1. Clone this repository
   2. `yarn install`

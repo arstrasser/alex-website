@@ -1,7 +1,7 @@
 import "./slide.scss";
 
 const Slide = (props:{children:any, anchor?:string, background?:string, display?:string, reverse?:boolean}) => (
-  <div id={"anchor-"+props.anchor} className="element Slide">
+  <div id={"anchor-"+props.anchor} className={"element Slide"+(props.reverse?" slide-reverse":"")}>
     {props.children}
     <style jsx>{`
       .Slide {

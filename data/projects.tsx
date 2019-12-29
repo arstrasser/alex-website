@@ -23,6 +23,14 @@ const projects:Array<{
   }> =
 [
   {
+    name:"Molex Internship",
+    short:"Wrote and deployed production line management software that is still in use today",
+    description:"",
+    links: [],
+    pictures: ["molex.jpg"],
+    tags:["Work", "CS"]
+  },
+  {
     name:"Pingry App",
     short: "App to organize classes and school information for my high school.",
     description: "",
@@ -42,22 +50,19 @@ const projects:Array<{
     tags:["Volunteer", "CS"]
   },
   {
+    name:"Home Automation",
+    short: "Making my dorm room run on its own!",
+    description: "",
+    links: [],
+    pictures: ["LightSwitch.jpg"],
+    tags:["Maker"]
+  },
+  {
     name:"Puzzle Box Dice",
     short: "3D printed puzzle with electronic locks driven by Arduino that only opens when solved.",
     description: "",
     links: [],
     pictures: ["DicePuzzle.jpg"],
-    tags:["Volunteer", "CS"]
-  },
-  {
-    name:"2048 Solver",
-    short: "Machine learning approach to solve 2048",
-    description: "2048 was a popular mobile game in 2014",
-    pictures: ["2048.png"],
-    links:[
-      {text:"View it live", url:"https://arstrasser.github.io/2048-solver/UI/"},
-      {text:"View code on Github", url:"https://arstrasser.github.io/2048-solver/UI/"}
-    ],
     tags:["Volunteer", "CS"]
   },
   {
@@ -67,6 +72,14 @@ const projects:Array<{
     links: [],
     pictures: ["Robotics.jpg"],
     tags:["Robotics"]
+  },
+  {
+    name:"Personal Website",
+    short: "The website you're looking at now!",
+    description: "This website was built on react.",
+    links: [{text:"View the code on Github", url:"https://github.com/arstrasser/alex-website"}],
+    pictures: ["AS.png"],
+    tags:["CS"]
   },
   {
     name:"Somerset County 4-H Fair App",
@@ -96,9 +109,20 @@ const projects:Array<{
     name:"3D Renderer",
     short: "A simple ray tracer in Processing3",
     description: "",
-    links: [{text:"View code on Github", url:"https://github.com/arstrasser/ray-tracer"}],
+    links: [{text:"Watch the demo", url:"https://youtu.be/qZ-yG2kiIX8"},{text:"View code on Github", url:"https://github.com/arstrasser/ray-tracer"}],
     pictures: ["RayTracer.png"],
     tags:["CS"]
+  },
+  {
+    name:"2048 Solver",
+    short: "Machine learning approach to solve 2048",
+    description: "2048 was a popular mobile game in 2014",
+    pictures: ["2048.png"],
+    links:[
+      {text:"View it live", url:"https://arstrasser.github.io/2048-solver/UI/"},
+      {text:"View code on Github", url:"https://arstrasser.github.io/2048-solver/UI/"}
+    ],
+    tags:["Volunteer", "CS"]
   },
   {
     name:"Custom Chocolates",
@@ -107,22 +131,6 @@ const projects:Array<{
     links: [],
     pictures: ["Chocolate.jpg"],
     tags:["Maker"]
-  },
-  {
-    name:"Home Automation",
-    short: "Making my dorm room run on its own!",
-    description: "",
-    links: [],
-    pictures: ["LightSwitch.jpg"],
-    tags:["Maker"]
-  },
-  {
-    name:"Personal Website",
-    short: "The website you're looking at now!",
-    description: "This website was built on react.",
-    links: [{text:"View the code on Github", url:"https://github.com/arstrasser/alex-website"}],
-    pictures: ["AS.png"],
-    tags:["CS"]
   },
   {
     name:"Lego Robotics",
