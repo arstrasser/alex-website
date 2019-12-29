@@ -67,7 +67,7 @@ const options = [
   {
     name:"Techie",
     header:"I am a Techie",
-    mainImage:"Tech.jpg",
+    mainImage:"tech.jpg",
     listContent: (<div>
       <li>Member of ABTech at Carnegie Mellon</li>
       <li>1 year experience with lighting design and programming</li>
