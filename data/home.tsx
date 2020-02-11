@@ -69,7 +69,7 @@ const options = [
     header:"I am a Techie",
     mainImage:"tech.jpg",
     listContent: (<div>
-      <li>Member of ABTech at Carnegie Mellon</li>
+      <li>Member of AB Tech at Carnegie Mellon</li>
       <li>1 year experience with lighting design and programming</li>
       <li>Some experience with sound design</li>
     </div>)
